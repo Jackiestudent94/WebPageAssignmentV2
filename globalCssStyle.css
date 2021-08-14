@@ -4,14 +4,31 @@
 /* variables can be set here to be used throughout style sheet */
 :root{
     --header-color:#55d6aa;
+
     --nav-text-color:#444;
-    --offerings-backround-color:darkslateblue;
-    --offerings-left-backround-color:darkslateblue;
-    --offerings-right-backround-color:darkgrey;
-    --offerings-border-color: #566;
-    --grid-right-backround-color: rgba(218, 27, 202, 0.445);
+
+    --offerings-backround-color:#222;
+    --offerings--border-color:yellow;
+
+
+    --offerings-left-backround-color:#222;
+    --offerings-left-border-color:yellow;
+    --offerings-left-font-color:white;
+
+    --offerings-right-backround-color:#222;
+    --offerings-right-border-color:yellow;
+    --offerings-right-font-color:white;
+
+
+    --offerings-border-color: #222;
+
+    --grid-right-backround-color: #222;
+    --grid-right-font-color: white;
+ 
     --grid-left-backround-color: #55d6aa;
-    --grid-container-backround-color: #223;
+    --grid-left-font-color: #222;
+
+    --grid-container-backround-color: #222;
 }
 
 body {
@@ -90,6 +107,10 @@ nav a:hover::before{
     width: 100%;
 }
 
+nav a.active::before{
+    width:100%
+}
+
 /*generic h1*/
 h1 {
     padding-left:10px;
@@ -107,7 +128,6 @@ h1 {
     width: 90%;
 
 }
-
 /* generic grid */
 .grid-container {
     display: inline-grid;
@@ -117,16 +137,17 @@ h1 {
 }
 .grid-left-item{
     background-color:var(--grid-left-backround-color);
-    border: 1px black solid;
+    border: 1px white solid;
     padding: 20px;
     font-size:30px;
-    text-align:ceter;
+    text-align:center;
     padding-top:30px
 }
 
 .grid-right-item{
     background-color:var(--grid-right-backround-color);
-    border: 1px black solid;
+    color: var(--grid-right-font-color);
+    border: 1px white solid;
     padding: 20px;
     font-size:20px;
     text-align:ceter;
@@ -137,7 +158,7 @@ h1 {
         added here for re-useability if needed */
 .offerings-grid{
     background-color:var(--offerings-backround-color);
-    border: 1px black solid;
+    border: 1px var(--offerings-border-color) solid;
     padding: 20px;
     text-align: center;
     list-style-type: none;
@@ -145,18 +166,25 @@ h1 {
 
 .offerings-left-item{
     background-color:var(--offerings-left-backround-color);
-    border: 1px var(--offerings-border-color) solid;
+    border: 1px var(--offerings-right-border-color) solid;
+    color:var(--offerings-left-font-color);
     padding: 20px;
     font-size:20px;
     text-align:ceter;
-    padding-top:30px
+    padding-top:30px;
 }
 
 .offerings-right-item{
     background-color: var(--offerings-right-backround-color);
-    border: 1px var(--offerings-border-color)solid;
+    border: 1px var(--offerings-left-border-color)solid;
+    color:var(--offerings-right-font-color);
     padding: 20px;
     font-size:20px;
     text-align:ceter;
-    padding-top:30px
+    padding-top:30px;
+   
+}
+
+.offerings-grid li{
+    list-style: none;
 }

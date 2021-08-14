@@ -8,7 +8,7 @@
     --nav-text-color:#444;
 
     --offerings-backround-color:#222;
-    --offerings--border-color:yellow;
+    --offerings-border-color:yellow;
 
 
     --offerings-left-backround-color:#222;
@@ -20,13 +20,13 @@
     --offerings-right-font-color:white;
 
 
-    --offerings-border-color: #222;
-
     --grid-right-backround-color: #222;
     --grid-right-font-color: white;
+    --grid-right-border-color:yellow;
  
     --grid-left-backround-color: #55d6aa;
     --grid-left-font-color: #222;
+    --grid-left-border-color:yellow;
 
     --grid-container-backround-color: #222;
 }
@@ -133,6 +133,7 @@ h1 {
     display: inline-grid;
     grid-template-columns:auto auto auto;
     background-color: var(--grid-container-backround-color);
+    border:yellow;
     padding: 10px
 }
 .grid-left-item{
@@ -166,7 +167,7 @@ h1 {
 
 .offerings-left-item{
     background-color:var(--offerings-left-backround-color);
-    border: 1px var(--offerings-right-border-color) solid;
+    border: 1px var(--offerings-left-border-color) solid;
     color:var(--offerings-left-font-color);
     padding: 20px;
     font-size:20px;
@@ -176,7 +177,7 @@ h1 {
 
 .offerings-right-item{
     background-color: var(--offerings-right-backround-color);
-    border: 1px var(--offerings-left-border-color)solid;
+    border: 1px var(--offerings-right-border-color)solid;
     color:var(--offerings-right-font-color);
     padding: 20px;
     font-size:20px;

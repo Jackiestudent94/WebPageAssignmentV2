@@ -8,25 +8,25 @@
     --nav-text-color:#444;
 
     --offerings-backround-color:#222;
-    --offerings-border-color:yellow;
+    --offerings-border-color:grey;
 
 
     --offerings-left-backround-color:#222;
-    --offerings-left-border-color:yellow;
+    --offerings-left-border-color:grey;
     --offerings-left-font-color:white;
 
     --offerings-right-backround-color:#222;
-    --offerings-right-border-color:yellow;
+    --offerings-right-border-color:grey;
     --offerings-right-font-color:white;
 
 
     --grid-right-backround-color: #222;
     --grid-right-font-color: white;
-    --grid-right-border-color:yellow;
+    --grid-right-border-color:grey;
  
     --grid-left-backround-color: #55d6aa;
     --grid-left-font-color: #222;
-    --grid-left-border-color:yellow;
+    --grid-left-border-color:grey;
 
     --grid-container-backround-color: #222;
 }

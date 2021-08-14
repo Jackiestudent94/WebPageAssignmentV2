@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+
+/* variables can be set here to be used throughout style sheet */
+:root{
+    --header-color:#55d6aa;
+    --nav-text-color:#444;
+    --offerings-backround-color:darkslateblue;
+    --offerings-left-backround-color:darkslateblue;
+    --offerings-right-backround-color:darkgrey;
+    --offerings-border-color: #566;
+    --grid-right-backround-color: rgba(218, 27, 202, 0.445);
+    --grid-left-backround-color: #55d6aa;
+    --grid-container-backround-color: #223;
+}
+
+body {
+    margin: 0; 
+    background: #222;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+/* Creation of heading nav bar with logo */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: var(--header-color)
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+    padding: 10px 0;
+  }
+
+nav{
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+nav li {
+    display: inline-block;
+    margin-left : 70px;
+    padding-top : 23px;
+    position: relative;
+
+}
+
+nav a {
+    color: var(--nav-text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #444;
+ 
+    position: absolute;
+    top: 0;
+    width: 0%;
+ 
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+/*generic h1*/
+h1 {
+    padding-left:10px;
+    color: white;
+}
+
+/*made a class for text to be added to on all pages*/
+.landingText {
+    color: white;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.landingText img {
+    width: 90%;
+
+}
+
+/* generic grid */
+.grid-container {
+    display: inline-grid;
+    grid-template-columns:auto auto auto;
+    background-color: var(--grid-container-backround-color);
+    padding: 10px
+}
+.grid-left-item{
+    background-color:var(--grid-left-backround-color);
+    border: 1px black solid;
+    padding: 20px;
+    font-size:30px;
+    text-align:ceter;
+    padding-top:30px
+}
+
+.grid-right-item{
+    background-color:var(--grid-right-backround-color);
+    border: 1px black solid;
+    padding: 20px;
+    font-size:20px;
+    text-align:ceter;
+    padding-top:30px
+}
+
+/* grid intended to be used on membershipFees.html
+        added here for re-useability if needed */
+.offerings-grid{
+    background-color:var(--offerings-backround-color);
+    border: 1px black solid;
+    padding: 20px;
+    text-align: center;
+    list-style-type: none;
+}
+
+.offerings-left-item{
+    background-color:var(--offerings-left-backround-color);
+    border: 1px var(--offerings-border-color) solid;
+    padding: 20px;
+    font-size:20px;
+    text-align:ceter;
+    padding-top:30px
+}
+
+.offerings-right-item{
+    background-color: var(--offerings-right-backround-color);
+    border: 1px var(--offerings-border-color)solid;
+    padding: 20px;
+    font-size:20px;
+    text-align:ceter;
+    padding-top:30px
+}
